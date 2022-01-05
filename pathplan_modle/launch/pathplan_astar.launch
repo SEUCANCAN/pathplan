@@ -1,0 +1,7 @@
+<!-- -->
+<launch>
+<node name = "pathplan" pkg = "pathplan_modle" type = "pathplan" output="screen"/>
+<node name = "astar_server" pkg = "pathplan_modle" type = "astar_server" output="screen"/>
+<param name = "car" value = "5.5"/>
+<node name="rviz_visualisation" pkg="rviz" type="rviz" output="log" args="-d $(find pathplan_modle)/config/pathplanrviz.rviz" />
+</launch>
